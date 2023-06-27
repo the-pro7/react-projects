@@ -1,0 +1,97 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Handlee", cursive;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.display-board {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.display-board > .title {
+  color: #53aaf2;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  aspect-ratio: 1;
+  box-shadow: 5px -3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 1rem;
+  background-color: white;
+  position: relative;
+  overflow: clip;
+  cursor: pointer;
+}
+
+.display > .colorName {
+  color: #343a40;
+}
+
+
+/* Coming soon! */
+/* .display::after {
+  content: "Copy HexCode";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #53aaf2;
+  font-size: 2rem;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 200ms;
+  border-radius: 1rem;
+} */
+
+/* .display:hover::after {
+  transform: translateY(0);
+} */
+
+/* Input.jsx */
+#userColor {
+  border: 2px solid #535bf2;
+  background-color: transparent;
+  color: #535bf2;
+  padding: 0.7em;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  /* transform: translateX(25%); */
+  width: 90%;
+  max-width: 500px;
+  font-family: "Handlee", cursive;
+}
