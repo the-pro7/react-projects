@@ -5,14 +5,25 @@ import Input from "./Input";
 
 function App() {
   const [value, setValue] = useState("");
+  const [hexCode, setHexCode] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const handleChange = (e) => {
-    setValue(e.target.value.toLowerCase())
-  }
+    setValue(e.target.value.toLowerCase());
+  };
   return (
     <div className="App">
-      <Display value={value}/>
-      <Input value={value}  handleChange={handleChange}/>
+      <Display
+        value={value}
+        hexCode={hexCode}
+        copied={copied}
+        setCopied={setCopied}
+      />
+      <Input
+        value={value}
+        handleChange={handleChange}
+        setHexCode={setHexCode}
+      />
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
+import colorNames from 'colornames'
 
-const Input = ({value,  handleChange}) => {
 
+const Input = ({ value, handleChange, setHexCode }) => {
   return (
     <>
       <input
@@ -9,7 +10,10 @@ const Input = ({value,  handleChange}) => {
         value={value}
         id="userColor"
         placeholder="Enter a color..."
-        onChange={handleChange}
+        onChange={(e) => {
+          handleChange(e);
+          setHexCode(colorNames(e.target.value))
+        }}
       />
     </>
   );
@@ -18,7 +22,7 @@ const Input = ({value,  handleChange}) => {
 Input.propTypes = {
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-
-}
+  setHexCode: PropTypes.func.isRequired
+};
 
 export default Input;

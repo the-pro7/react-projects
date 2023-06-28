@@ -55,17 +55,24 @@ body {
   justify-content: center;
   align-items: center;
   width: 350px;
+  flex-flow: column wrap;
   aspect-ratio: 1;
   box-shadow: 5px -3px 10px rgb(0 0 0 / 0.2);
   border-radius: 1rem;
   background-color: white;
-  position: relative;
-  overflow: clip;
   cursor: pointer;
 }
 
 .display > .colorName {
   color: #343a40;
+}
+
+.display > .colorName:last-of-type {
+  margin-top: -1em;
+}
+
+.display > .copyMessage {
+  margin-top: -1em;
 }
 
 
