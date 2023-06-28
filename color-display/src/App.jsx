@@ -10,10 +10,10 @@ function App() {
     setValue(e.target.value.toLowerCase())
   }
   return (
-    <>
+    <div className="App">
       <Display value={value}/>
       <Input value={value}  handleChange={handleChange}/>
-    </>
+    </div>
   );
 }
 

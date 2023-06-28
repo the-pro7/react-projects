@@ -32,6 +32,13 @@ body {
   min-height: 100vh;
 }
 
+.App {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .display-board {
   display: flex;
   flex-flow: column wrap;
